@@ -1,3 +1,5 @@
+This project is a part of the React nano degree on Udacity
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
