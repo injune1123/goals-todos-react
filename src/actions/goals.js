@@ -18,7 +18,7 @@ function removeGoal (id) {
   }
 }
 
-function toggleGoal (id) {
+export function toggleGoal (id) {
   return {
       type: TOGGLE_GOAL,
       id
@@ -27,7 +27,7 @@ function toggleGoal (id) {
 
 export function handleAddGoal (name, cb) {
   return (dispatch) => {
-      API.saveGoal(name)
+      return API.saveGoal(name)
           .then((goal)=>{
               dispatch(addGoal(goal))
               cb()

@@ -46,7 +46,7 @@ export function handleDeleteTodo (todo) {
   return (dispatch) => {
       dispatch(removeTodo(todo.id))
 
-      API. eleteTodo(todo.id).catch(()=>{
+      API.deleteTodo(todo.id).catch(()=>{
           dispatch(addTodo(todo))
           alert('An error occurred. Try again.')
       })

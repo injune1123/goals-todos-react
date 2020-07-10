@@ -4,7 +4,7 @@ import List from './List';
 import {
   handleAddGoal,
   handleDeleteGoal,
-  toggleGoalAction
+  toggleGoal
 } from '../actions/goals';
 
 class Goals extends React.Component {
@@ -13,7 +13,7 @@ class Goals extends React.Component {
 
       this.props.dispatch(handleAddGoal(
           this.input.value,
-          () => {() => this.input.value = ''}
+          () => this.input.value = ''
       ))
   }
 
@@ -22,7 +22,7 @@ class Goals extends React.Component {
   }
 
   toggleItem = (id) => {
-      this.props.dispatch(toggleGoalAction(id))
+      this.props.dispatch(toggleGoal(id))
   }
   render() {
       return (
